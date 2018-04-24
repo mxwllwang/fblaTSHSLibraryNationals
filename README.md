@@ -7,16 +7,20 @@ Manages members, fines, and inventory for a school library.
 Programmed in Eclipse WindowBuilder with Java Swing, Runs in JRE 7 / version 1.7.0_80 (Java 7)
 
 INSTALLATION:
-To run, download the Runnable JAR file, FBLACodingSubmissionMW.jar. This file will most likely end up in the downloads folder, and so will TSHSLibrarydata.ser (unless you move the .jar before running it). For more secure purposes, the jar file can be moved to another folder.
-The application will create a text file: Do not delete the TSHSLibrarydata.ser file, or the data stored in the database will be reset. Do not modify its filepath. 
-A backup way to run is to download the project classes to an IDE like Eclipse/IntelliJ, and run the class TSHSLibrary.java, and the program should appear. All necessary files are included in the repository. 
+To run, download the Runnable JAR file, FBLACodingSubmissionMW.jar. 
+This file will most likely end up in the downloads folder, and so will TSHSLibrarydata.ser (unless you move the .jar before running it). For more secure purposes, the jar file can be moved to another folder.
+The application will create a text file to store information: Do not delete the TSHSLibrarydata.ser file, or the data stored in the database will be reset. Do not modify its filepath. 
+A backup way to run is to download the project classes to an IDE like Eclipse/IntelliJ, and run the class TSHSLibrary.java, and the program should appear. 
+All necessary files are included in the repository. 
 Text documents show specifications and additional notes about developing the application.
 
 USAGE:
 The program has 5 separate tabs: Books, Members, Report, Help, and Settings, on the upper left hand corner of the screen. To navigate to a tab, simply click on it.
 
-To create a new book, fill in the fields on the left of the book tab, and press the create button. Make sure all required fields, indicated by a * are filled out. To clear fields, click on the cancel button.
-To view information about a book, look directly at the table, or select the book from the table (See advanced features). Doing so will display more specific information about each book in the left hand side of the tab, or the viewpane.
+To create a new book, fill in the fields on the left of the book tab, and press the create button. 
+Make sure all required fields, indicated by a * are filled out. To clear fields, click on the cancel button.
+To view information about a book, look directly at the table, or select the book from the table (See advanced features). 
+Doing so will display more specific information about each book in the left hand side of the tab, or the viewpane.
 Once a book is selected, the book can be edited by clicking the "Edit entry" button and then filling out the fields on the right of the book tab. The book can be removed by clicking "Remove book".
 
 To create a new member, follow the same steps as book creation on the members tab, under the "Register New Member" header.
@@ -36,7 +40,6 @@ ADVANCED FEATURES:
 All tables can be sorted by clicking on the column header. This makes locating books and members by field much easier.
 By selecting a book from the books table and immediately selecting a member, the book's ID will already be filled out in the check out book by ID form and allow the member to check out that book.
 By selecting the button "Generate report" at the bottom of the members tab, a unique individual report can be produced showing report information only about the selected member. These settings can be then further toggled in the report tab when generating reports.
-
 
 PROJECT GUIDELINES:
 
