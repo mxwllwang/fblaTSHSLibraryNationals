@@ -1,0 +1,69 @@
+Textual Hierarchy
+Shows collapsed methods in TSHSLibrary
+
+  // FIELDS AT THE TOP
+
+  // Shows view pane when a book in the table is selected
+  // BOOK_SELECTED
+ListSelectionListener tableBookSelectionChanged = new ListSelectionListener() {
+
+  // Shows view pane when a member in the table is selected
+  // MEMBER_SELECTED
+ListSelectionListener tableMembersSelectionChanged = new ListSelectionListener() {
+
+  // Allows checkouts when a book in the memberbooks table is selected
+  // MEMBER_BOOK_SELECTED
+ListSelectionListener tableMemberBooksSelectionChanged = new ListSelectionListener() {
+
+   * Launch the application.
+public static void main(String[] args)
+
+   * The constructor creates the application. (Calls initialize)
+public TSHSLibrary() {
+
+   * Initialize the contents of the frame.
+private void initialize() {
+
+  // Generates a report based off of settings in the report tab
+private void generateReport() {
+
+  // Generates a Book-issuance report for a member (at the present time)
+  // True for weekly report
+private String issuanceReport(Member m, boolean weekly) {
+
+  // Generates a Fine report for a member (at the present time)
+private String fineReport(Member m) {
+
+  // Adds a new book to the book table.
+private void addBookRow(Book b) {
+
+  // Recreates the book table / refreshes
+private void refreshBooks() {
+
+  // Adds a new member to the table.
+private void addMemberRow(Member m) {
+
+  // Recreates the member table
+private void refreshMembers() {
+  
+  // Adds a new book to the member-book table (books that member has checked out)
+private void addMemberBookRow(Book b) {
+
+  // Recreates the member-book table
+  // If true, does not update the members table as well
+private void refreshMemberBooks(Member m, boolean r) {
+
+  // Clears all fields in the book creation tool-bar.
+private void clearBookFields() {
+
+  // Clears all fields in the member creation tool-bar.
+private void clearMemberFields() {
+
+  // Allows the settings tab to display library presets.
+private void setSettingsTab() {
+
+  // Hides help pane answers
+private void resetHelpPane() {
+
+  /* Allows creation of the second dewey ComboBox based off of information from the first deweyComboBox
+private void initiateDeweySelection() {

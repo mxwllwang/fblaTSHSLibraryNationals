@@ -1,0 +1,205 @@
+Maxwell Wang
+Planning notes
+
+Develop a database program to manage the issuance of books at a school library. 
+Give the school a name: Tesla STEM High School
+
+The program must be able to complete a minimum of the following tasks:
+
+  Track student and teacher names with ability to enter/view/edit names.
+
+Class: Student, Teacher (OR just one class)
+Field: Name
+Field: Books
+Field: Days check out
+
+  Track the issuance of books for a student or teacher.
+
+Class: Books
+Field: ID
+Field: Title, Author, Date
+Field: Ownership, Days used
+Field: Fines per day
+
+  Manage different limits for the number of books that can be issued to a student or teacher.
+  Manage the number of days that students and teachers can check out any book. 
+  (Hint: Mostly like the number of days will differ for students and teachers).
+
+Part of teacher and student classes, or general class constants
+  
+  Give each book a different ID. 
+  Also, each book of same name and same author (but number of copies) will have different ID.
+
+Books.ID/ Hash map
+
+  Generate/print weekly report to show books issued to whom and number of days leading to the due date return.
+
+Make .txt file? # of days, need keep track of this in the Book class
+Many types of reports
+  
+  Generate/print weekly report of detail of fines (when book not returned on time).
+  
+Books.fines
+ 
+Books:
+
+Overdue: 10 cents a day
+Lost books: $60 replacement fee (if you return it, charge is reduced to a $10 late fee)
+
+Reference Books:
+
+Overdue: 25 cents a day
+Lost reference books: $85 replacement fee (if you return it, charge is reduced to a $10 late fee)
+
+DVDs or Videos:
+
+Overdue: 25 cents per day
+Lost DVDs or Videos: $85 replacement fee (if you return it, charge is reduced to a $10 late fee)
+The maximum charge for overdue items is $25, and for lost items is $100.
+
+http://jwu-ri.libanswers.com/faq/141878
+
+
+Dewey Decimal system
+Have drop-down to automatically categorize
+https://www.library.illinois.edu/infosci/research/guides/dewey/
+
+Cutter Numbers
+
+https://www.loc.gov/aba/pcc/053/table.html
+https://www.itsmarc.com/crs/mergedProjects/cutter/cutter/basic_table_cutter.htm
+
+"Work Mark"
+http://library.mtsu.edu/dewey/
+
+
+"Weekly report" 
+Generate reports every Sunday
+
+
+Report Examples
+
+
+Generate/print weekly report to show books issued to whom and # days leading up to due date return
+Show all books that are checked out
+
+Tesla STEM High School Library Report
+Report generated on __________
+
+10/14 members with books checked out
+30/250 books checked out
+
+===============================================
+Issued to:
+Maxwell Wang (Student)
+-----------------------------------------------
+Harry Potter
+J.K. Rowling
+ID: 1000123003
+ISBN: 1234567890123
+Type: Book
+
+Checked out on:
+Is due:
+Return in: __ days
+-----------------------------------------------
+HanamanaHanamana Hee Hoo Haa
+Farmer John
+ID: 1232123000
+ISBN: 5353535353530
+Type: Book
+
+Checked out on: July 4 PST ... 5:30
+Is due: Sept 1 PST ... 5:32
+Return in: 5 days
+----------------------------------------------
+
+===============================================
+Issued to:
+Issac Newton (Teacher)
+----------------------------------------------
+Chemistry: Matter and change
+Glencoe
+ID: 15006789000
+ISBN: 123456890098
+Type: Reference
+
+Checked out on:
+Is due:
+Overdue for: __ days
+-----------------------------------------------
+
+
+Generate/print weekly report of detail of fines (when not returned on time)
+
+Tesla STEM High School Library Report
+Fines for all students/Maxwell Wang
+Report generated on __________
+
+===============================================
+
+Maxwell Wang (Student)
+5 books checked out
+2 overdue
+
+----------------------------------------------- this one is after the first
+Harry Potter
+J.K. Rowling
+ID: 1000123003
+ISBN: 1234567890123
+Type: Book
+
+Checked out on:
+Was due:
+Overdue for: 3 days
+Fine: 5.00$
+
+-----------------------------------------------
+
+Chemistry: Matter and change
+Glencoe
+ID: 15006789000
+ISBN: 123456890098
+Type: Reference
+
+Checked out on:
+Was due:
+Overdue for: 2 days
+Fine: 10.00$
+----------------------------------------------- stays with the book above
+
+Total fines: 15.00$
+
+===============================================
+
+
+
+Fields
+
+
+
+ID commentary
+
+   * Generates the unique ID number for each book. The ID is created as
+   * follows:
+   * 
+   * 1 1 3 2 3 2 5 2 0 2 
+   * - - - - - - - - - - 
+   * | |---| |-| |-| |-| 
+   * a   b    c   d   e
+   * 
+   * a: null (1) 
+   * b: 3-digit Dewey Call Number, without decimal s
+   * c: 2-digit ascii value of First Name 
+   * d: 2-digit ascii value of Last Name
+   *    c is first character of author's last name
+   *    d is first character of title 
+   *    will not allow special symbols in author's name, such as {, }, |, ~
+   *    if characters with 3-digit long ascii is inputed, the first digit will be cut
+   * e: Copy identifier (allows for up to 100 copies of any given book)
+
+   
+   
+   
+   
+   
